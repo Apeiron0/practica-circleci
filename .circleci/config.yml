@@ -1,0 +1,19 @@
+
+version: 2.1
+
+jobs:
+  hola-devops:
+    docker:
+      - image: cimg/base:current
+
+    steps:
+      - checkout
+
+      - run:
+          name: Mostrar mensaje DevOps
+          command: echo "Hola DevOps - IDGS10"
+
+workflows:
+  mi-primer-pipeline:
+    jobs:
+      - hola-devops
